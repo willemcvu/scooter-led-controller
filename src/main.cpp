@@ -78,7 +78,6 @@ void policeBlinkAlternate(){
     leds = CRGB::Black;
 
     FastLED.delay(POLICE_BLINK_DELAY);
-
   }
 }
 
@@ -89,7 +88,6 @@ void blinker(){
   // leds = CHSV(30, 255, max(brightness,10));
   leds[pos] += CHSV(hue, 255, 255);
   FastLED.delay(5);
-
 }
 
 void hueCycle(){
@@ -189,5 +187,5 @@ void solidColorCycle(){
 }
 
 void loop(){
-  solidColorCycle();
+  hueCycle();
 }
